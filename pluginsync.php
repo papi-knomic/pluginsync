@@ -111,8 +111,6 @@ class PluginSync {
 	public function process_scheduled_plugins() {
 		$plugins = get_option('pluginsync_scheduled_plugins', []);
 
-        error_log(print_r($plugins, true));
-
 		if (!empty($plugins)) {
 			include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 			include_once ABSPATH . 'wp-admin/includes/plugin.php';
